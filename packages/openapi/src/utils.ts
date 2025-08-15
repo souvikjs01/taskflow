@@ -1,6 +1,6 @@
 import { match } from "ts-pattern";
 
-export const getSecurityMetadata = ({
+const getSecurityMetadata = ({
   security = true,
   securityType = "bearer",
 }: {
@@ -24,3 +24,5 @@ export const getSecurityMetadata = ({
     ...(security && { openApiSecurity }),
   };
 };
+
+export default getSecurityMetadata
